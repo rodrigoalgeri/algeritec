@@ -3,11 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>AlgeriTec</title>
 </head>
-<body>
+<body class="light transition-colors duration-500 ease-in-out">
+
   <header>
-    
+
+    <nav class="flex justify-around items-center p-1.5 shadow-md">
+      <div class="flex items-center gap-8">
+        
+        
+
+
+  <!-- Botão para abrir o menu modal -->
+  <div class="">
+    <div class="flex items-center p-2 rounded-lg cursor-pointer hover:bg-gray-200"
+         onclick="abrirModal()">
+        <span class="material-symbols-outlined">apps</span>
+    </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menuModal" class="modal bg-white shadow-lg fixed top-0 left-0 h-full overflow-y-auto">
+    <!-- Botão de fechar -->
+    <button class="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
+            onclick="fecharModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+             stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <!-- Conteúdo do menu -->
+    <div class="p-4">
+        <h2 class="text-lg font-semibold mb-4">Menu</h2>
+        <ul>
+            <li class="py-2">Item 1</li>
+            <li class="py-2">Item 2</li>
+            <li class="py-2">Item 3</li>
+            <!-- Adicione mais itens conforme necessário -->
+        </ul>
+    </div>
+</div>
+
+   
+
+
+
+        
+        <a href="index.html">
+          <div class="flex items-center gap-2 cursor-pointer">
+          <img class="img-nav" src="imagens/logo.png" alt="">
+          <span>AlgeriTec</span>
+        </div>
+      </a>
+        <div class="flex">
+          <ul class="flex items-center gap-8">
+            <li class="p-2 rounded-lg hover:bg-slate-100"><a href="#">Início</a></li>
+            <li class="p-2 rounded-lg hover:bg-slate-100"><a href="#">Categorias</a></li>
+            <li class="p-2 rounded-lg hover:bg-slate-100"><a href="#">Tutorias</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex items-center bg-slate-50 rounded-lg border hover:bg-slate-100">
+        <form action="search" class="flex items-center bg-slate-50 rounded-lg px-1 gap-3 hover:bg-slate-100">
+          <span class="material-symbols-outlined rounded-lg p-1 text-slate-600 bg-slate-50 cursor-pointer hover:bg-white">
+            search
+            </span>
+          <input class="w-96 placeholder:text-slate-500 font-light bg-transparent hover:bg-transparent h-10 rounded-lg outline-0" type="search" placeholder="Faça uma busca...">
+          
+        </form>
+      </div>
+      <div class="flex items-center gap-8">
+
+        
+
+
+
+
+
+
+<!-- Botão para alternar modo dark -->
+<div class="">
+  <button class="flex items-center hover:bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-lg p-2 focus:outline-none"
+          onclick="toggleDarkMode()">
+      <span class="material-symbols-outlined">toggle_on</span>
+  </button>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+        
+
+
+        <div class="flex items-center p-2 rounded-lg hover:bg-gray-200"
+        onclick="openModal()">
+       <button class="flex items-center">
+           <span class="material-symbols-outlined">account_circle</span>
+       </button>
+   </div>
+   
+   <!-- Overlay do modal (fundo escuro) -->
+   <div id="modal-overlay"
+        class="fixed inset-0 bg-black opacity-50 z-10 hidden">
+   </div>
+   
+   <!-- Modal de Login -->
+   <div id="login-modal"
+        class="modal fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white shadow-lg z-20 rounded-lg p-6 w-80"
+        style="display: none;">
+       <div class="flex justify-between items-center mb-4">
+           <h2 class="text-xl font-bold">Login</h2>
+           <button class="text-gray-600 hover:text-gray-800 focus:outline-none"
+                   onclick="closeModal()">
+               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+               </svg>
+           </button>
+       </div>
+       <form>
+           <div class="mb-4">
+               <label for="username" class="block text-gray-700 font-bold mb-2">Usuário</label>
+               <input type="text" id="username" name="username" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Digite seu usuário">
+           </div>
+           <div class="mb-6">
+               <label for="password" class="block text-gray-700 font-bold mb-2">Senha</label>
+               <input type="password" id="password" name="password" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Digite sua senha">
+           </div>
+           <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+               Entrar
+           </button>
+       </form>
+       <p class="text-sm mt-4 text-center">Não tem uma conta? <a href="#" class="text-blue-500 hover:underline">Registre-se</a></p>
+   </div>
+   
+
+
+
+
+
+
+      </div>
+    </nav>
+
   </header>
 </body>
 </html>

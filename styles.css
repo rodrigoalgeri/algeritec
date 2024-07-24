@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.img-nav {
+    width: 45px;
+}
+
+
+
+.material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 200,
+  'opsz' 24,
+}
+
+.material-symbols-outlined a{
+    font-size: 30px;
+}
+
+
+
+
+
+/* Estilos adicionais */
+.modal {
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    width: 300px; /* Largura do menu */
+    z-index: 1000; /* Z-index para garantir que o menu esteja acima do conteúdo */
+}
+
+.modal.open {
+    transform: translateX(0);
+}
+
+
+
+
+
+
+/* Estilos globais */
+body {
+    transition: background-color 0.3s ease;
+}
+
+.dark {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+.dark .text-gray-800 {
+    color: #e2e8f0; /* Alterando a cor do texto para modo dark */
+}
+
+
+
