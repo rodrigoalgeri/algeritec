@@ -39,6 +39,19 @@
 
 
 
+ /* Estilo CSS para o efeito de desfoque do backdrop */
+ .backdrop-blur-md {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Para compatibilidade com navegadores WebKit */
+  }
+
+
+
+
+
+
+
+
 
 
 
@@ -100,8 +113,3 @@ body {
     background-color: #f1f5f9;
     border-radius: 8px;
   }
-  
-
-
-
-  

@@ -39,17 +39,15 @@ document.getElementById('login-modal').addEventListener('click', function(event)
 
 
 
- // Função para abrir o menu modal
- function abrirModal() {
-    const modal = document.getElementById('menuModal');
-    modal.classList.add('open');
-}
+function abrirModal() {
+    var modal = document.getElementById('login-modal');
+    modal.classList.remove('hidden');
+  }
 
-// Função para fechar o menu modal
-function fecharModal() {
-    const modal = document.getElementById('menuModal');
-    modal.classList.remove('open');
-}
+  function fecharModal() {
+    var modal = document.getElementById('login-modal');
+    modal.classList.add('hidden');
+  }
 
 
 
@@ -82,6 +80,11 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.add('light'); // Modo claro padrão
     }
 });
+
+
+
+
+
 
 
 
